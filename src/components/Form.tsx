@@ -1,12 +1,25 @@
-import React from 'react'
+import { useState } from "react";
+import { CardI } from "../App";
 
 const Form = ({ setCard, card }: any) => {
+
+    const [errorMsg, setErrorMsg] = useState<CardI>({
+        cardHolder: false,
+        cardNumber: false,
+        expMonth: false,
+        expYear: false,
+        cardCvc: false
+    })
 
     const handleChange = (e: any) => {
 
         if (e.target.name !== 'cardHolder') {
             let isNum = /^\d+$/.test(e.target.value);
-            console.log({ isNum })
+
+            setErrorMsg({
+                ...errorMsg,
+                [e.target.name]: !isNum ? true : false
+            })
         }
 
         setCard({

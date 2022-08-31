@@ -3,11 +3,11 @@ import CreditCard from "./components/CreditCard";
 import Form from "./components/Form";
 
 export interface CardI {
-  cardHolder: string
-  cardNumber: string
-  expMonth: string
-  expYear: string
-  cardCvc: string
+  cardHolder: string | boolean
+  cardNumber: string | boolean
+  expMonth: string | boolean
+  expYear: string | boolean
+  cardCvc: string | boolean
 }
 
 function App() {
