@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import CreditCard from "./components/CreditCard";
+import Form from "./components/Form";
+
+export interface CardI {
+  cardHolder: string
+  cardNumber: string
+  expMonth: number
+  expYear: number
+  cvc: number
+}
 
 function App() {
+
+  const [card, setCard] = useState<CardI>({
+    cardHolder: '',
+    cardNumber: "",
+    expMonth: 12,
+    expYear: 12,
+    cvc: 123
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="creditcard">
+      <CreditCard />
+      <Form setCard={setCard} />
     </div>
   );
 }

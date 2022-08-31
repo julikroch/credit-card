@@ -1,0 +1,76 @@
+.creditcard__form {
+    padding: 3rem 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+
+    &-cardholder,
+    &-number {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1.5rem;
+    }
+
+    &-label {
+        text-transform: uppercase;
+        font-family: 'Prompt', sans-serif;
+        font-weight: 600;
+        padding-bottom: .75rem;
+    }
+
+    & input {
+        font-size: 1rem;
+        border: 1px solid #aaa;
+        padding: .5rem;
+        border-radius: .25rem;
+        letter-spacing: 1.5px;
+
+        &::placeholder {
+            color: #ccc;
+        }
+    }
+
+    &-details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-exp-date {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    &-cvc {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        & input {
+            max-width: 155px;
+        }
+    }
+
+    &-date-inputs {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 1rem;
+
+        & input {
+            max-width: 70px;
+        }
+    }
+
+    &-btn {
+        display: block;
+        font-family: 'Prompt', sans-serif;
+        margin: 2rem 0;
+        width: 100%;
+        padding: .5rem;
+        background-color: #000;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 1.25rem;
+        border-radius: .5rem;
+    }
+}

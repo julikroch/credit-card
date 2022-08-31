@@ -1,0 +1,66 @@
+.creditcard {
+    max-width: 400px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 40rem) {
+        justify-content: center;
+    }
+}
+
+.creditcard__images {
+    background-color: #000;
+    padding: 3rem 1.5rem;
+    position: relative;
+    max-height: 280px;
+
+    &-back,
+    &-front {
+        background-repeat: no-repeat;
+        background-size: 287px 155px;
+        width: 287px;
+        height: 155px;
+        position: relative;
+    }
+
+    &-cvc {
+        position: absolute;
+        right: 3rem;
+        top: 4rem;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    &-back {
+        background-image: url('../../images/bg-card-back.png');
+        float: right;
+    }
+
+    &-front {
+        background-image: url('../../images/bg-card-front.png');
+        top: -3.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.5rem;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    &-number {
+        font-size: 1rem;
+        letter-spacing: 3px;
+    }
+}
+
+.creditcard__details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+
+    &-expdate {
+        margin-right: 3.25rem;
+    }
+}
