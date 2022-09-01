@@ -50,6 +50,7 @@ const Form = ({ setCard, card }: any) => {
                     placeholder='0000 0000 0000 0000'
                     onChange={handleChange}
                 />
+                {errorMsg.cardNumber && <p className="creditcard__form-error">Only numbers are allowed</p>}
             </div>
 
             <div className="creditcard__form-details">
@@ -73,6 +74,7 @@ const Form = ({ setCard, card }: any) => {
                             onChange={handleChange}
                         />
                     </div>
+                    {(errorMsg.expMonth || errorMsg.expYear) && <p className="creditcard__form-error">Only numbers are allowed</p>}
                 </div>
                 <div className="creditcard__form-cvc">
                     <label className='creditcard__form-label' htmlFor="cardCvc">CVC</label>
@@ -84,6 +86,7 @@ const Form = ({ setCard, card }: any) => {
                         placeholder='123'
                         onChange={handleChange}
                     />
+                    {errorMsg.cardCvc && <p className="creditcard__form-error">Only numbers are allowed</p>}
                 </div>
             </div>
 

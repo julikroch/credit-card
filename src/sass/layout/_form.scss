@@ -30,7 +30,6 @@
 
     &-details {
         display: flex;
-        align-items: center;
         justify-content: space-between;
     }
 
@@ -72,5 +71,11 @@
         letter-spacing: 2px;
         font-size: 1.25rem;
         border-radius: .5rem;
+    }
+
+    &-error {
+        color: red;
+        padding-top: .5rem;
+        font-size: .85rem;
     }
 }
